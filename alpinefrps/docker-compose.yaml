@@ -1,0 +1,12 @@
+services:
+  userfrps:
+    image: aamao/userfrps:alpine
+    container_name: userfrps
+    network_mode: host
+    restart: always
+    volumes:
+      - ./data:/data
+    user: 1000:1000
+    command: sleep infinity
+    labels:
+      createdBy: "Apps"
